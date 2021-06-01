@@ -193,7 +193,11 @@ nav {
 
 hr {
   // border: solid 1px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ff652f;
+  height:2px;
+  border-width:0;
+  color: #ff652f;
+  background-color: #ff652f;
+  // border: 1px solid #ff652f;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
