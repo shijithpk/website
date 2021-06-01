@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% import "post-preview.html" as post_macros %}
+
+{% block posthead %} 
+{% for post in paginator.pages %}
+  <link rel="prerender" href="{{ post.permalink }}" />
+{% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+{{ section.content | safe }}
+{% for post in paginator.pages %}
+  {{ post_macros::post_preview(post=post) }}
+{% endfor %}
+
+{% if paginator.previous %}
+  <div  style="float:left;">
+    <a class='alwaysDark' style="font-weight:500;" href="{{ paginator.previous | safe }}">&lt; Prev</a>
+  </div>
+{% endif %}
+
+{% if paginator.next %}
+  <div style="float:right;">
+    <a class='alwaysDark' style="font-weight:500;" href="{{ paginator.next | safe }}"> Next &gt;</a>
+  </div>
+
+  {% endif %}
+{% endblock content %}
+
+
+

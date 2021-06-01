@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block styles%}
+  <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+{% endblock styles %}
+
+{% block posthead %}
+
+{% endblock posthead %}
+
+
+{% block content %}
+  <div class="content">
+    {{ page.content | safe }}
+
+  </div>
+{% endblock content %}

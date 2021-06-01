@@ -1,0 +1,54 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+theme = "simple-dev-blog"
+
+taxonomies = [ { name = "tags" } ]
+
+title = "Shijith.com"
+description = "Random thoughts and musings"
+
+generate_feed = true
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
+
+nav = [
+#   { name = "Blog", path = "/blog/" },
+  { name = "Home", path = "/" },
+  { name = "About", path = "/about/" }
+]
+
+latest_text = "Check out my latest post:"
+
+icon = "header_smaller.png"
+profile_small = "header_smaller.png"
+# profile_large = "profile.jpg"
+
+#add this later
+# default_og_image - the path default og:image for your page
+# blog_path - the path to your blog (defaults to blog)
+
+# accent = "#05a081"
+# accent_light = "#82d0c0"
+accent = "#ff652f"
+accent_light = "#ff652f"
+
+author = "Shijith Kunhitty"
+
+footer_about = """"""
+
+not_found_message = """
+Sorry, nothing to see here! Go to the [homepage](/).
+"""
