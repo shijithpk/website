@@ -1,6 +1,8 @@
 +++
 title = "Finding new music on Spotify by aggregating the choices of tastemakers"
 description = "An amateur coder's attempt to make discovering new music easier by combining playlists from influential websites."
+[extra]
+thumbnail = 'logos.jpg'
 +++
 
 ### TLDR
