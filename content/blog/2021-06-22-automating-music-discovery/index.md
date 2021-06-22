@@ -1,10 +1,10 @@
 +++
 title = "Finding new music on Spotify by aggregating the choices of tastemakers"
-description = "An amateur coder's attempt to make it easier to find new music by consolidating playlists from influential websites and stations."
+description = "An amateur coder's attempt to make discovering new music easier by combining playlists from influential websites."
 +++
 
 ### TLDR
-I'm an amateur python coder and I write here about trying to make it easier to find new music. I do this by consolidating playlists from influential music websites and radio stations into a single one on Spotify. 
+I'm an amateur python coder and I write here about trying to make it easier to find new music. I do this by combining playlists from influential music websites and radio stations into a single one on Spotify. 
 
 Have decided to do this and not use Spotify's human-curated and algorithmic playlists because they lack authority for me.
 
