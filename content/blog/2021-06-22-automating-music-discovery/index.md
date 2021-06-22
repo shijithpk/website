@@ -4,7 +4,7 @@ description = "An amateur coder's attempt to make discovering new music easier b
 +++
 
 ### TLDR
-I'm an amateur python coder and this post is about my attempt to make discovering new music easier. I do this by essentially combining playlists from influential music websites and radio stations into a single one on Spotify. 
+I'm an amateur python coder and I write here about trying to make it easier to find new music. I do this by essentially combining playlists from influential music websites and radio stations into a single one on Spotify. 
 
 Have decided to do this and not use Spotify's human-curated and algorithmic playlists because they lack authority for me.
 
