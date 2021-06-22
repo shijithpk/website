@@ -19,7 +19,7 @@ If you don't want to code anything and just want the music, you have two options
 ### My earlier routine for finding music
 When it comes to finding new music, my usual sources were Spotify playlists, online radio streams and YouTube channels. I love music, but going through each of them is difficult to do every week. 
 
-Having to visit each individual website, realizing that "Oh, I didnt go to [NPR Live Sessions](https://livesessions.npr.org/) last week, so got to do it this week". The very fact that I call it a 'routine' shows how it had become a chore for me, a sequence of steps to follow every week. 
+Having to visit each individual website, realizing that "Oh, I didn't go to [NPR Live Sessions](https://livesessions.npr.org/) last week, so got to do it this week". The very fact that I call it a 'routine' shows how it had become a chore for me, a sequence of steps to follow every week. 
 
 So I've decided to simplify my music discovery process, and make it less of a 'routine' by collecting all the new music I should be listening to in one Spotify playlist. Reduce those multiple steps into a single one, stick to that one playlist and be happy with that.
 
