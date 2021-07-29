@@ -61,8 +61,6 @@ I've browsed Twitter this way for a few weeks now, and while I don't really miss
 
 The quality of replies to tweets can be pretty poor sometimes, but there's always a few people in there with good insights. No reply counts means I don't see which tweets are getting responses, so I don't know which tweets I need to click on to get to those insights. The reply count is important for the way I use Twitter, so that's something I'm considering keeping and not hiding.
 
-### Extending it to Tweetdeck
-
 I also use Tweetdeck heavily, so there are filters in my list for Tweetdeck too. As with the main website Twitter.com, I'm considering unhiding the reply counts.
 
 <!-- ![Pic of reply, retweet and like stats being hidden for a tweet in Tweetdeck, before and after filters are applied](https://i.imgur.com/Be28RKa.jpg) -->
