@@ -1,6 +1,6 @@
 +++
 title = "Hide like counts on Twitter and karma points on Reddit with uBlock Origin"
-description = "Improve your digital wellbeing by removing all the stats social media websites push on you"
+description = "Improve your digital wellbeing by getting rid of all the stats pushed on you by social media"
 [extra]
 thumbnail = 'social_media_image.png'
 +++
