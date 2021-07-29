@@ -68,7 +68,6 @@ I also use Tweetdeck heavily, so there are filters in my list for Tweetdeck too.
 <!-- ![Pic of reply, retweet and like stats being hidden for a tweet in Tweetdeck, before and after filters are applied](https://i.imgur.com/Be28RKa.jpg) -->
 ![Pic of reply, retweet and like stats being hidden for a tweet in Tweetdeck, before and after filters are applied](reddit_5.jpg)
 
-For hiding all the blue ticks in Tweetdeck, there's some extra steps you have to take, check the [additional instructions](#additional-instructions).
 
 ### Wrapping up
 
@@ -85,19 +84,3 @@ Twitter and Reddit may eventually introduce settings like Facebook and Instagram
 I'm not a professional developer/programmer/coder, so am sure there are things here I should be doing differently. If you have any suggestions, please let me know at mail@shijith.com or at my Twitter handle [@shijith](https://twitter.com/shijith).
 
 For example, I understand a filter will be more efficient, the smaller the initial set of nodes it goes through on a webpage. So if you have advice on optimising these filters even further, do let me know!
-
-### Additional Instructions
-
-You need to follow this only if you're as insistent/anal as I am about removing all blue tick symbols from Tweetdeck. This is for removing the blue tick when you click on a tweet from a verified user and you get an expanded view in the column. Go to the 'Settings' tab of uBlock, tick 'I am an advanced user', click the gears icon next to the setting, after which a text file with all the advanced settings will open up. 
-
-<!-- ![Pic showing where uBlock Origin advanced settings can be accessed](https://i.imgur.com/D8LYepL.jpg) -->
-![Pic showing where uBlock Origin advanced settings can be accessed](reddit_6.jpg)
-
-
-Go to 'userResourcesLocation' at the bottom of the file, and in the place of 'unset', paste this url
-```
-https://raw.githubusercontent.com/gorhill/uBlock/master/assets/resources/scriptlets.js
-``` 
-and you're done. The filter that removes this particular blue tick will now work.
-
-It isn't a perfect solution as the blue tick flashes for a second next to the handle before disappearing. So if you notice it, you still come to know who's verified or not. Will update the [Github repo]((https://github.com/shijithpk/hide_like_counts_with_ublock)) if I come up with a better method.
