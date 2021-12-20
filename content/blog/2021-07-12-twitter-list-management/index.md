@@ -18,19 +18,19 @@ This package will help heavy twitter and tweetdeck users, especially those who u
 
 Here's what you can do with the `twitter_list_mgmt` package:
 * Main functions
-    * Add members to your list from another list <small>([link](#1))</small>
-    * Add members to your list from multiple lists <small>([link](#2))</small>
-    * Remove members from your list who are in another list <small>([link](#3))</small>
-    * Remove members from your list who are in any of multiple other lists <small>([link](#4))</small>
-    * Create a new list that combines members from multiple lists <small>([link](#5))</small>
-    * Create a new list that has members common to multiple lists <small>([link](#6))</small>
-    * Create a new list with members from a list, who aren't in any of multiple other lists <small>([link](#7))</small>
+    * Add members to your list from another list <small>([link](./#1))</small>
+    * Add members to your list from multiple lists <small>([link](./#2))</small>
+    * Remove members from your list who are in another list <small>([link](./#3))</small>
+    * Remove members from your list who are in any of multiple other lists <small>([link](./#4))</small>
+    * Create a new list that combines members from multiple lists <small>([link](./#5))</small>
+    * Create a new list that has members common to multiple lists <small>([link](./#6))</small>
+    * Create a new list with members from a list, who aren't in any of multiple other lists <small>([link](./#7))</small>
 * Other functions
-    * Get the list id from a list url <small>([link](#8))</small>
-    * Get all the user ids of list members <small>([link](#9))</small>
-    * Add user ids to a list <small>([link](#10))</small>
-    * Remove user ids from a list <small>([link](#11))</small>
-    * Create a pandas dataframe from a list <small>([link](#12))</small>
+    * Get the list id from a list url <small>([link](./#8))</small>
+    * Get all the user ids of list members <small>([link](./#9))</small>
+    * Add user ids to a list <small>([link](./#10))</small>
+    * Remove user ids from a list <small>([link](./#11))</small>
+    * Create a pandas dataframe from a list <small>([link](./#12))</small>
 
 ### How to install the package and set things up
 

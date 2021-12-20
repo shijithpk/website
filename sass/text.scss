@@ -78,16 +78,19 @@ code {
 
 a,
 a:visited {
-  color: #444444;
+	//   color: #444444;
+	color: var(--accent-color);
+	text-decoration: none;
   // text-decoration: none;
-  text-decoration-color: var(--accent-color-light);
-  text-decoration-thickness: .1em;
-  text-underline-offset: .07em;
   // border-bottom: 1px solid var(--accent-color-light);
 }
 
 a:hover {
   color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color-light);
+  text-decoration-thickness: .1em;
+  text-underline-offset: .07em;
 }
 
 a.alwaysLight{
