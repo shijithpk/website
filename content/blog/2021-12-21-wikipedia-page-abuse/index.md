@@ -6,7 +6,7 @@ thumbnail = 'wikipedia_logo.webp'
 +++
 
 ### TLDR
-This post tries to find out which wikipedia pages about India are abused the most. And by abuse, I mean people editing wikipedia pages to twist the truth and present their own version of events. Abuse here also covers blatant vandalism like deleting whole sections from a page. 
+This post tries to find out which wikipedia pages on India are abused the most. And by abuse, I mean people editing wikipedia pages to twist the truth and present their own version of events. Abuse here also covers blatant vandalism like deleting whole sections from a page. 
 
 The level of abuse was determined by checking over 150,000 pages related to India on Wikipedia, going through their edit histories, and tallying how many users have had edits reverted. An edit being reverted is a sign that the edit was bad, or worse, malicious. So the number of users getting reverted on a page gives an idea of how much abuse a page is facing.
 
@@ -35,7 +35,7 @@ The way I'm measuring abuse is by counting the number of users who've had their 
 ![Screenshot of a page's edit history where an edit has been tagged reverted](reverted_tag_screenshot.webp)
 <sup>Screenshot of a page's edit history where an edit has been tagged reverted (circled in red)</sup>
 
-But a better option in my mind is not tallying up the number of reverted edits, but tallying up the number of users responsible for those edits. I wanted to avoid situations where a few users may be doing most of the malicious edits on a page. The number of unique users also gives a better idea of how widespread online discontent may be with a particular page.
+But I try to do one better by not tallying up the number of reverted edits, but tallying up the number of users responsible for those edits. I wanted to avoid situations where a few users may be doing most of the malicious edits on a page. The number of unique users also gives a better idea of how widespread online discontent may be with a particular page.
 
 Now even edits that are done in good faith and without intending to twist the truth can fall short of wikipedia's standards and get reverted. So the final figures will have a margin of error to them, but they should still be good enough to give a sense of which pages are the most abused.
 
@@ -45,17 +45,17 @@ As for which pages were chosen for monitoring, over 150,000 articles assessed by
 
 If we look back at 2021 through the lens of wikipedia abuse, which pages have fallen victim the most?
 
-(I should make it clear these violations may have only been on page for a few hours or days before someone caught it and reverted it. So this is more a record of failed attempts at abuse, rather than successful ones.)
+(I should make it clear these violations may have only been on the page for a few hours or days before someone caught it and reverted it. So this is more a record of failed attempts at abuse, rather than successful ones.)
 
-If we just look at articles related to India politics, the page covering the 2021 Tamil Nadu Assembly elections saw the most abuse with 215 users reverted in 2021. Pages about elections that happened this year or are coming up in 2022 like the UP elections saw a lot of abuse.
+If we just look at articles related to India politics, the page covering the 2021 Tamil Nadu Assembly elections saw the most abuse with 215 users reverted in 2021. Pages about elections that happened this year or are coming up in 2022 like the UP elections generally saw a lot of abuse.
 
 ![Most abused Indian pages on Wikipedia in 2021](2021_top_10.webp)
 
-One entry in the top 10 I didn't know much about was Muhammad Iqbal. The national poet of Pakistan, he wrote the patriotic song 'Saare Jahan Se Acha' that many Indians are familiar with, and he was also the first to present the two-nation theory that Muslims should have their own separate country. 
+One entry in the top 10 I didn't know much about was Muhammad Iqbal. The national poet of Pakistan, he wrote the patriotic song 'Saare Jahan Se Acha' that many Indians are familiar with, and he was also the first to present the two-nation theory of Muslims deserving their own separate country. 
 
 From what I can make out, the edits reverted are a mixture of vandalism and good-faith edits from users on both sides of the border, with many taking issue with him being referred to as just 'Muhammad Iqbal' instead of a more respectful '[Allama](https://en.wikipedia.org/wiki/Allamah) Muhammad Iqbal'.
 
-The amount of growing interest in the UP elections can be seen by how from August to November, it was ones of the pages most abused each month, impressive for an election whose dates haven't even been announced yet.
+The amount of growing interest in the UP elections can be seen by how from August to November, it was one of the pages most abused each month, impressive for an election whose dates haven't even been announced yet.
 
 ![Most abused Indian pages on Wikipedia each month -- Politics Pages](politics_monthly.webp)
 
@@ -71,11 +71,11 @@ I was a little curious about how the graphic above would look like if we left ou
 
 ![Most abused Indian pages on Wikipedia each month -- Outside politics, movies, TV and sports](nonpolitics_monthly_no_movies_tv_sports.webp)
 
-If we look at this new table, some of the entries are explainable, holidays or religious festivals being celebrated in a particular month such as Pahela Baisakh in April or Independence day in August. Other entries seem to be following the news cycle such as Gyanvapi Mosque in April and Cyclone Tauktae in May. 
+If we look at this new table, some of the entries are explainable, holidays or religious festivals appearing in the list for particular months such as Pahela Baisakh in April or Independence day in August. Other entries seem to be following the news cycle such as Gyanvapi Mosque in April and Cyclone Tauktae in May. 
 
-I did find it interesting that articles on biryani and dosa were also abused. Looking into the page histories, it seems some disputed the origins of biryani in Muslim culinary traditions, some took issue with the article saying the word 'biryani' has roots in the Persian language, and there were more petty edits like removing Pakistan from a list of places where biryani is eaten.
+I did find it interesting that articles on biryani and dosa were also abused. Looking into the page histories, it seems some disputed the origins of biryani in Muslim culinary traditions, some took issue with the article saying the word 'biryani' is derived from Persian, and there were more petty edits like removing Pakistan from a list of countries where biryani is eaten.
 
-For the Dosa article, some abusive edits tried changing the spelling of 'dosa' to 'dosai' to match how it's pronounced in some south indian states. Some argued over whether the oldest recipe for dosa is found in ancient Tamil or ancient Kannada literature, and others over whether Tamil or Udupi restaurants popularised the dosa in Mumbai first. 
+For the article on dosa, some abusive edits tried changing the spelling of 'dosa' to 'dosai' to match how it's pronounced in some south indian states. Some argued over whether the oldest recipe for dosa is found in ancient Tamil or ancient Kannada literature, and others over whether it was Tamil or Udupi restaurants that first popularised the dosa in Mumbai. 
 
 ### SIDE NOTES
 Just putting some random thoughts here I couldn't fit into the copy:
@@ -88,7 +88,7 @@ Just putting some random thoughts here I couldn't fit into the copy:
     
 * This is more of a caveat. Some of these pages will have been placed under protection to stop getting abused. Protection could, for example, mean edits by anonymous users not appearing till they're approved, or if someone has been a registered user for less than 4 days old and has done less than 10 edits, they won't be able to edit certain pages. The page on Narendra Modi is under even stricter protection—only someone who's been a user for more than 30 days and has done over 500 edits can edit the page, and this has been the case since April. Such protections brings down the abuse levels for many pages, so that should be kept in mind.
     
-* Now given the size of India's internet userbase (over 600 million by one estimate), seeing just 215 users abuse a wikipedia page over a year doesn't seem like much. But this is one of those situations that will get worse over the coming years as wikipedia attracts ever more attention from the troll armies forming around various interests. So it may be interesting to keep an eye on it.
+* Now given the size of India's internet userbase (over 600 million by one estimate), seeing just 215 users abuse a wikipedia page over a year doesn't seem like much. But this is one of those situations that will get worse over the coming years as wikipedia attracts ever more attention from troll armies that form around various interests. So it may be interesting to keep an eye on it.
     
 * I'm just looking at the English-language Wikipedia, but if anyone wants to use wikipedia abuse to gauge online discontent at a regional level, they should also look at Indian-language wikipedias and the abuse they experience.
 
