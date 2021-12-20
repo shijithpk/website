@@ -241,4 +241,11 @@ hr {
   main {
     padding-top: 1rem;
   }
+
+a,
+a:visited {
+	color: var(--accent-color);
+	text-decoration: none;
+  	// border-bottom: 1px solid var(--accent-color-light);
+	}
 }
