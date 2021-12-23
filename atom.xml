@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Shijith.com</title>
+	<subtitle>Random thoughts and musings</subtitle>
+	<link href="https://shijith.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://shijith.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-12-21T00:00:00+00:00</updated>
+	<id>https://shijith.com/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Which wikipedia pages in India are abused the most?</title>
+		<published>2021-12-21T00:00:00+00:00</published>
+		<updated>2021-12-21T00:00:00+00:00</updated>
+		<link href="https://shijith.com/blog/wikipedia-page-abuse/" type="text/html"/>
+		<id>https://shijith.com/blog/wikipedia-page-abuse/</id>
+		<content type="html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR&lt;&#x2F;h3&gt;
+&lt;p&gt;This post tries to find out which wikipedia pages on India are abused the most. And by abuse, I mean people editing wikipedia pages to twist the truth and present their own version of events. Abuse here also covers blatant vandalism like deleting whole sections from a page. &lt;&#x2F;p&gt;
+&lt;p&gt;The level of abuse was determined by checking over 150,000 pages related to India on Wikipedia, going through their edit histories, and tallying how many users have had edits reverted. An edit being reverted is a sign that the edit was bad, or worse, malicious. So the number of users getting reverted on a page gives an idea of how much abuse a page is facing.&lt;&#x2F;p&gt;
+&lt;p&gt;For 2021 (or to be precise, the first 11 months of 2021), the page on the 2021 Tamil Nadu assembly elections was the page most abused with 215 users having their edits reverted this year. And if we look at pages outside politics, the page on the 2021 Bollywood movie &#x27;Radhe&#x27; was the most violated, with 324 users having their edits reverted. &lt;&#x2F;p&gt;
+&lt;p&gt;The post goes into how these conclusions were reached, and introduces a &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;abuse_checker&quot;&gt;twitter account&lt;&#x2F;a&gt; that tracks this abuse weekly.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;motivation-for-the-post&quot;&gt;Motivation for the post&lt;&#x2F;h3&gt;
+&lt;p&gt;Decided to do this analysis after reading an &lt;a href=&quot;https:&#x2F;&#x2F;www.onmanorama.com&#x2F;news&#x2F;kerala&#x2F;2021&#x2F;08&#x2F;15&#x2F;onam-wikipedia-page-edit-wars-right-wing-mobs.amp.html&quot;&gt;article&lt;&#x2F;a&gt; by Ronnie Kuriakose about the wikipedia page on Onam. It was being repeatedly changed to emphasise the festival&#x27;s Hindu aspects, and play down how Onam is celebrated  across religious communities in the state. Googling a little more about wikipedia abuse in India, I then came across a &lt;a href=&quot;https:&#x2F;&#x2F;caravanmagazine.in&#x2F;media&#x2F;wikipedia-earned-ire-hindu-right&quot;&gt;story&lt;&#x2F;a&gt; by Nishant Kauntia about how wikipedia pages related to current events were being altered. For example, the page on the Delhi riots of 2020 was being continually edited to misrepresent the role Hindu mobs played in attacking Muslims.&lt;&#x2F;p&gt;
+&lt;p&gt;After reading these news stories, I wanted to see if I could keep track of these wikipedia attacks in a systematic way. So not wait for a reporter to get wind of these things happening on Wikipedia, and then tell me about it through an article. But build some tool that flags articles being subject to mass abuse, and does so on a periodic basis.&lt;&#x2F;p&gt;
+&lt;p&gt;The tool&#x27;s results can be seen on twitter at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;abuse_checker&quot;&gt;@abuse_checker&lt;&#x2F;a&gt;, which will tweet out two simple graphics every Monday morning. The first graphic names pages, political and non-political, that were abused the most the previous week. And the second graphic, the pages facing the biggest delta or increase in abuse compared to the week earlier. Here&#x27;s the graphics for this week:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;past_1_week.webp&quot; alt=&quot;Most abused Indian pages on Wikipedia last week&quot; &#x2F;&gt;
+&lt;img src=&quot;delta_from_last_week.webp&quot; alt=&quot;The Indian pages on Wikipedia facing biggest increase in abuse&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-tracking-abuse-could-be-important&quot;&gt;Why tracking abuse could be important&lt;&#x2F;h3&gt;
+&lt;p&gt;The thing is Wikipedia is very important to the online world. It&#x27;s one of the top results in any google search, and is also the source for infocards that appear next to google searches. It&#x27;s not an exaggeration to say that wikipedia is a foundational source of knowledge on the internet now. So getting to shape its pages in a certain way theoretically allows you to influence how others think about a topic.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s a matter for academia whether influence works as uni-directional or one-way as this, or if this is an overstatement of wikipedia&#x27;s power, but there is no doubt that the people abusing the website believe it to be important in some way or the other, and that belief drives their need to alter its content.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;measuring-abuse&quot;&gt;Measuring abuse&lt;&#x2F;h3&gt;
+&lt;p&gt;The way I&#x27;m measuring abuse is by counting the number of users who&#x27;ve had their edits reverted over a period. So what happens is every time a wikipedia user tries to do something malicious on a page and they&#x27;re found out, an editor tries to improve the edit first by rephrasing or correcting it. But if there&#x27;s too much that&#x27;s wrong about the offending edit, it&#x27;s then tagged as &#x27;reverted&#x27; and the page restored to the version that existed prior to the reverted edit. So if you add up the number of edits tagged &#x27;reverted&#x27;, you should get an idea of how much abuse a page is being subject to.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;reverted_tag_screenshot.webp&quot; alt=&quot;Screenshot of a page&#x27;s edit history where an edit has been tagged reverted&quot; &#x2F;&gt;
+&lt;sup&gt;Screenshot of a page&#x27;s edit history where an edit has been tagged reverted (circled in red)&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But I try to do one better by not tallying up the number of reverted edits, but tallying up the number of users responsible for those edits. I wanted to avoid situations where a few users may be doing most of the malicious edits on a page. The number of unique users also gives a better idea of how widespread online discontent may be with a particular page.&lt;&#x2F;p&gt;
+&lt;p&gt;Now even edits that are done in good faith and without intending to twist the truth can fall short of wikipedia&#x27;s standards and get reverted. So the final figures will have a margin of error to them, but they should still be good enough to give a sense of which pages are the most abused.&lt;&#x2F;p&gt;
+&lt;p&gt;As for which pages were chosen for monitoring, over 150,000 articles assessed by &lt;a href=&quot;https:&#x2F;&#x2F;en.m.wikipedia.org&#x2F;wiki&#x2F;Wikipedia:WikiProject_India&quot;&gt;WikiProject India&lt;&#x2F;a&gt;—a group of wikipedia editors responsible for maintaining articles about India—were taken. A &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;wikipedia_abuse_checker&quot;&gt;python script&lt;&#x2F;a&gt; checks changes made to these pages every week and then tweets out graphics every Monday morning.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;most-abused-pages-of-2021&quot;&gt;Most abused pages of 2021&lt;&#x2F;h3&gt;
+&lt;p&gt;If we look back at 2021 through the lens of wikipedia abuse, which pages have fallen victim the most?&lt;&#x2F;p&gt;
+&lt;p&gt;(I should make it clear these violations may have only been on the page for a few hours or days before someone caught it and reverted it. So this is more a record of failed attempts at abuse, rather than successful ones.)&lt;&#x2F;p&gt;
+&lt;p&gt;If we just look at articles related to India politics, the page covering the 2021 Tamil Nadu Assembly elections saw the most abuse with 215 users reverted in 2021. Pages about elections that happened this year or are coming up in 2022 like the UP elections generally saw a lot of abuse.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;2021_top_10.webp&quot; alt=&quot;Most abused Indian pages on Wikipedia in 2021&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;One entry in the top 10 I didn&#x27;t know much about was Muhammad Iqbal. The national poet of Pakistan, he wrote the patriotic song &#x27;Saare Jahan Se Acha&#x27; that many Indians are familiar with, and he was also the first to present the two-nation theory of Muslims deserving their own separate country. &lt;&#x2F;p&gt;
+&lt;p&gt;From what I can make out, the edits reverted are a mixture of vandalism and good-faith edits from users on both sides of the border, with many taking issue with him being referred to as just &#x27;Muhammad Iqbal&#x27; instead of a more respectful &#x27;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Allamah&quot;&gt;Allama&lt;&#x2F;a&gt; Muhammad Iqbal&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;The amount of growing interest in the UP elections can be seen by how from August to November, it was one of the pages most abused each month, impressive for an election whose dates haven&#x27;t even been announced yet.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;politics_monthly.webp&quot; alt=&quot;Most abused Indian pages on Wikipedia each month -- Politics Pages&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s not only pages related to politics that get abused though. If we look outside politics, we see it&#x27;s pages about movies such as Bollywood film &#x27;Radhe&#x27; and Tamil film &#x27;Master&#x27; or shows such as &#x27;Indian Idol&#x27; and &#x27;Fear Factor&#x27; that experience the most vandalism. These edits may not be politically motivated, but the popularity of these movies and shows comes with a price as online mischief-makers flock to such pages.&lt;&#x2F;p&gt;
+&lt;p&gt;And if we look at the pages outside politics that were most abused each month, the entries tend to track the release schedule of major movies in Hindi and the southern languages. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;nonpolitics_monthly.webp&quot; alt=&quot;Most abused Indian pages on Wikipedia each month -- Non-Politics Pages&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The fact that wikipedia pages on movies face a lot of abuse isn&#x27;t terribly interesting though. Thanks to the Indian passion for films and cricket, the abuse these pages face is pretty much a given. &lt;&#x2F;p&gt;
+&lt;p&gt;I was a little curious about how the graphic above would look like if we left out pages on movies as well as TV and sports. Just to see what other pages have been attracting attention from bad actors, and if there are any curious surprises that would spring up.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;nonpolitics_monthly_no_movies_tv_sports.webp&quot; alt=&quot;Most abused Indian pages on Wikipedia each month -- Outside politics, movies, TV and sports&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If we look at this new table, some of the entries are explainable, holidays or religious festivals appearing in the list for particular months such as Pahela Baisakh in April or Independence day in August. Other entries seem to be following the news cycle such as Gyanvapi Mosque in April and Cyclone Tauktae in May. &lt;&#x2F;p&gt;
+&lt;p&gt;I did find it interesting that articles on biryani and dosa were also abused. Looking into the page histories, it seems some disputed the origins of biryani in Muslim culinary traditions, some took issue with the article saying the word &#x27;biryani&#x27; is derived from Persian, and there were more petty edits like removing Pakistan from a list of countries where biryani is eaten.&lt;&#x2F;p&gt;
+&lt;p&gt;For the article on dosa, some abusive edits tried changing the spelling of &#x27;dosa&#x27; to &#x27;dosai&#x27; to match how it&#x27;s pronounced in some south indian states. Some argued over whether the oldest recipe for dosa is found in ancient Tamil or ancient Kannada literature, and others over whether it was Tamil or Udupi restaurants that first popularised the dosa in Mumbai. &lt;&#x2F;p&gt;
+&lt;h3 id=&quot;side-notes&quot;&gt;SIDE NOTES&lt;&#x2F;h3&gt;
+&lt;p&gt;Just putting some random thoughts here I couldn&#x27;t fit into the copy:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Now if we see what different reporters write as a unified body of knowledge, am I contributing to it or advancing it in any way with this post? That wikipedia abuse is happening isn&#x27;t a news point. It&#x27;s been happening for a long time, and the recent surge in India has been covered well by &lt;a href=&quot;https:&#x2F;&#x2F;www.onmanorama.com&#x2F;news&#x2F;kerala&#x2F;2021&#x2F;08&#x2F;15&#x2F;onam-wikipedia-page-edit-wars-right-wing-mobs.amp.html&quot;&gt;Kuriakose&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;caravanmagazine.in&#x2F;media&#x2F;wikipedia-earned-ire-hindu-right&quot;&gt;Kauntia&lt;&#x2F;a&gt;. I guess knowing that such and such page was abused the most in 2021 is kind of news-y. But this post isn&#x27;t really about advancing that body of knowledge or presenting ready-made insights to readers. It&#x27;s about informing people there&#x27;s a twitter account available that lets them keep an eye on wikipedia abuse in India, and which they can use to form insights of their own. So I&#x27;m being a little less hand hold-y here compared to a traditional journalist.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Don&#x27;t know if there&#x27;ll be much interest in the topic of wikipedia abuse. Maybe not the general audience, but maybe people with an interest in wikipedia issues? Media researchers, casual contributors and the like? I don&#x27;t expect serious wikipedia editors to be using this though. First of all there&#x27;ll be at most a week&#x27;s lag between a page being abused and it appearing in the twitter graphics being put out. So it can&#x27;t be used as an early-warning system at all. Besides, serious editors have their own systems in place, and can create watchlists of pages to track within wikipedia itself. So yeah, I expect more of a niche audience for this.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Have decided to keep the indicator of abuse simple—number of users reverted on a page over a week or year. I could&#x27;ve gone through academic papers on wikipedia and borrowed a more sophisticated metric, but I think this is easier for people to grasp. I&#x27;ve done work in &lt;a href=&quot;https:&#x2F;&#x2F;shijithpk.github.io&#x2F;world_cup_tourism&#x2F;index.html&quot;&gt;the past&lt;&#x2F;a&gt; that tries to be conscientiously rigorous, but I don&#x27;t think journalism is the place for such work. Academic journals maybe, but not publications meant for the general public. In the pursuit of precision and conclusion validity, a lot of data journalism in India has become completely unreadable. I don&#x27;t think there&#x27;s anything wrong in admitting upfront that this post is a best-effort attempt, the conclusions may not be completely valid, but that hopefully this promotes the topic of wikipedia abuse in India as a legitimate avenue of research. And that some academic out there does a better job than I did in their paper. But I don&#x27;t think a journalist should be &lt;i&gt;the one&lt;&#x2F;i&gt; doing that paper.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;This is more of a caveat. Some of these pages will have been placed under protection to stop getting abused. Protection could, for example, mean edits by anonymous users not appearing till they&#x27;re approved, or if someone has been a registered user for less than 4 days and has done less than 10 edits, they won&#x27;t be able to edit certain pages. The page on Narendra Modi is under even stricter protection—only someone who&#x27;s been a user for more than 30 days and has done over 500 edits can edit the page, and this has been the case since April. Such protections brings down the abuse levels for many pages, so that should be kept in mind.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Now given the size of India&#x27;s internet userbase (over 600 million by one estimate), seeing just 215 users abuse a wikipedia page over a year doesn&#x27;t seem like much. But this is one of those situations that will get worse over the coming years as wikipedia attracts ever more attention from troll armies that form around various interests. So it may be interesting to keep an eye on it.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I&#x27;m just looking at the English-language Wikipedia, but if anyone wants to use wikipedia abuse to gauge online discontent at a regional level, they should also look at Indian-language wikipedias and the abuse they experience.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;suggestions-feedback&quot;&gt;Suggestions, feedback&lt;&#x2F;h3&gt;
+&lt;p&gt;If there are things here I should be doing differently, do let me know! Contact me at abuse_checker@shijith.com or at this Twitter handle &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;abuse_checker&quot;&gt;@abuse_checker&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Hide like counts on Twitter and karma points on Reddit with uBlock Origin</title>
+		<published>2021-07-30T00:00:00+00:00</published>
+		<updated>2021-07-30T00:00:00+00:00</updated>
+		<link href="https://shijith.com/blog/hiding-like-upvote-counts/" type="text/html"/>
+		<id>https://shijith.com/blog/hiding-like-upvote-counts/</id>
+		<content type="html">&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h3&gt;
+&lt;p&gt;The post is about how I use the adblocker &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gorhill&#x2F;uBlock&quot;&gt;uBlock Origin&lt;&#x2F;a&gt; to hide like&#x2F;retweet counts on Twitter, and karma points on Reddit.&lt;&#x2F;p&gt;
+&lt;p&gt;The motivation being that by removing all these stats social media pushes on you, you can have a better experience on these platforms and improve your digital wellbeing.&lt;&#x2F;p&gt;
+&lt;p&gt;To remove all the tweet&#x2F;post&#x2F;user stats, install uBlock Origin for your browser, copy the filters from this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;hide_like_counts_with_ublock&quot;&gt;Github repo&lt;&#x2F;a&gt; and paste it into the &#x27;My filters&#x27; section. &lt;&#x2F;p&gt;
+&lt;!-- ![Pic of uBlock my filters section](https:&#x2F;&#x2F;i.imgur.com&#x2F;o4wkONX.jpg) --&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_0.jpg&quot; alt=&quot;Pic of uBlock my filters section&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;These filters are mainly for people who use Reddit and Twitter on their desktops, sorry mobile app users. It could be used on mobile with a Firefox-uBlock combo (Android) or Safari-AdGuard (iOS), but I haven&#x27;t tested them. The filters could be used in adblockers other than uBlock Origin, but you&#x27;ll have to check first.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-i-created-these-filters&quot;&gt;Why I created these filters&lt;&#x2F;h3&gt;
+&lt;p&gt;The initial reason was to stop myself from getting upset over downvotes on Reddit. I&#x27;m particularly active on the subreddit for my home state, but saying anything unpopular has consequences with trolls downvoting your comment and bringing down your overall user &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;karma&#x2F;wiki&#x2F;index&#x2F;faq&#x2F;&quot;&gt;karma&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I was angry about this in the beginning, but realised that I could either stop expressing my opinions to keep my karma from going down, or I could continue saying what I have to say. I decided to not censor myself, and do something so that others&#x27; downvotes don&#x27;t affect me.&lt;&#x2F;p&gt;
+&lt;p&gt;The solution I came up with was to use my adblocker to hide my user karma from my screen, and also hide how many downvotes my comments are getting. So the points become out of sight, out of mind and I don&#x27;t stress over them anymore.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a screenshot of a subreddit homepage where the vote count gets hidden after applying my filters.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_1.jpg&quot; alt=&quot;Pic of a subreddit homepage before applying filters and after&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;!-- ![Pic of a subreddit homepage before applying filters and after](https:&#x2F;&#x2F;i.imgur.com&#x2F;Mh9XOi2.jpg) --&gt;
+&lt;p&gt;In this before and after screenshot, the vote count for comments under a post are hidden.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_2.jpg&quot; alt=&quot;Pic of how filters hide negative votes for a post&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;!--  ![Pic of how filters hide negative votes for a post](https:&#x2F;&#x2F;i.imgur.com&#x2F;QatWQ4t.jpg) --&gt;
+&lt;p&gt;Note that these filters still allow you to upvote or downvote posts or comments, so you can still engage with Reddit. Everything still works the same, just that the stats get hidden now.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s not just the vote counts for your own posts&#x2F;comments that get hidden, but those of everyone else too. And I think this might be a better way of doing things. Your judgement of a post&#x27;s or comment&#x27;s worth will now not be dependent on how many votes it&#x27;s gotten, but only on whether you think it&#x27;s good or not.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;creating-filters-for-twitter&quot;&gt;Creating filters for Twitter&lt;&#x2F;h3&gt;
+&lt;p&gt;Doing something similar for Twitter was kind of an afterthought. I didn&#x27;t really feel the need to do something for it like I did for Reddit. &lt;&#x2F;p&gt;
+&lt;p&gt;But I know that Instagram is &lt;a href=&quot;https:&#x2F;&#x2F;about.instagram.com&#x2F;blog&#x2F;announcements&#x2F;giving-people-more-control&quot;&gt;introducing&lt;&#x2F;a&gt; the option to hide like counts for their posts. So, as an experiment, I wanted to experience what Twitter would be like without like and retweet counts, follower counts etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Below is a before and after screenshot of NYT&#x27;s Twitter profile where the follower count gets hidden, as well as the blue tick.&lt;&#x2F;p&gt;
+&lt;!-- ![Pic of follower account and blue ticks hidden by filters for NYT&#x27;s Twitter profile](https:&#x2F;&#x2F;i.imgur.com&#x2F;Mhmev43.jpg)--&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_4.jpg&quot; alt=&quot;Pic of follower account and blue ticks hidden by filters for NYT&#x27;s Twitter profile&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is a before and after screenshot for a tweet where the reply, retweet and like counts get hidden.&lt;&#x2F;p&gt;
+&lt;!-- ![Pic of how filters hide reply, retweet and like counts for a tweet, before and after](https:&#x2F;&#x2F;i.imgur.com&#x2F;JXSqlsk.jpg) --&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_3B.jpg&quot; alt=&quot;Pic of how filters hide reply, retweet and like counts for a tweet, before and after&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;And in the spirit of evaluating people&#x27;s tweets based purely on the content, I decided to remove blue ticks from the Twitter interface too, so that I didn&#x27;t look at tweets coming from verified handles more favourably. &lt;&#x2F;p&gt;
+&lt;!-- ![Pic of how filters hide blue ticks for verified accounts, before and after for an NYT tweet](https:&#x2F;&#x2F;i.imgur.com&#x2F;3prMTVe.jpg)--&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_3A.jpg&quot; alt=&quot;Pic of how filters hide blue ticks for verified accounts, before and after for an NYT tweet&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve browsed Twitter this way for a few weeks now, and while I don&#x27;t really miss the retweet&#x2F;like counts or the blue ticks, I do miss the reply count.&lt;&#x2F;p&gt;
+&lt;p&gt;The quality of replies to tweets can be pretty poor sometimes, but there&#x27;s always a few people in there with good insights. No reply counts means I don&#x27;t see which tweets are getting responses, so I don&#x27;t know which tweets I need to click on to get to those insights. The reply count is important for the way I use Twitter, so that&#x27;s something I&#x27;m considering keeping and not hiding.&lt;&#x2F;p&gt;
+&lt;p&gt;I also use Tweetdeck heavily, so there are filters in my list for Tweetdeck too. As with the main website Twitter.com, I&#x27;m considering unhiding the reply counts.&lt;&#x2F;p&gt;
+&lt;!-- ![Pic of reply, retweet and like stats being hidden for a tweet in Tweetdeck, before and after filters are applied](https:&#x2F;&#x2F;i.imgur.com&#x2F;Be28RKa.jpg) --&gt;
+&lt;p&gt;&lt;img src=&quot;reddit_5.jpg&quot; alt=&quot;Pic of reply, retweet and like stats being hidden for a tweet in Tweetdeck, before and after filters are applied&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;&#x2F;h3&gt;
+&lt;p&gt;The first time you use these filters, the interfaces of these websites will look dramatically different. If there are any particular changes you want to undo, comment out the individual filter responsible in uBlock Origin. There&#x27;s a line above each filter explaining what it does.&lt;&#x2F;p&gt;
+&lt;p&gt;And if the layout of these websites change in a way that make these filters ineffective, I&#x27;ll keep the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;hide_like_counts_with_ublock&quot;&gt;Github repo&lt;&#x2F;a&gt; updated with working versions of these filters.&lt;&#x2F;p&gt;
+&lt;p&gt;You can even set up your own filters to deal with annoyances on other websites. This &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=2lisQQmWQkY&quot;&gt;YouTube video&lt;&#x2F;a&gt; is a good intro to uBlock Origin and this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gorhill&#x2F;uBlock&#x2F;wiki&quot;&gt;wiki&lt;&#x2F;a&gt; goes into all the details.&lt;&#x2F;p&gt;
+&lt;p&gt;Twitter and Reddit may eventually introduce settings like Facebook and Instagram have to hide like&#x2F;vote counts, but till that happens, this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;hide_like_counts_with_ublock&quot;&gt;filter list&lt;&#x2F;a&gt; is a handy option.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;suggestions-feedback&quot;&gt;Suggestions, feedback&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;m not a professional developer&#x2F;programmer&#x2F;coder, so am sure there are things here I should be doing differently. If you have any suggestions, please let me know at mail@shijith.com or at my Twitter handle &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;shijith&quot;&gt;@shijith&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, I understand a filter will be more efficient, the smaller the initial set of nodes it goes through on a webpage. So if you have advice on optimising these filters even further, do let me know!&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Making it easier to add users from one Twitter list to another</title>
+		<published>2021-07-12T00:00:00+00:00</published>
+		<updated>2021-07-12T00:00:00+00:00</updated>
+		<link href="https://shijith.com/blog/twitter-list-management/" type="text/html"/>
+		<id>https://shijith.com/blog/twitter-list-management/</id>
+		<content type="html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR&lt;&#x2F;h3&gt;
+&lt;p&gt;The post is about &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;twitter_list_mgmt&quot;&gt;&lt;code&gt;twitter_list_mgmt&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, a python package I created to make it easier to add users to your Twitter list from other lists.&lt;&#x2F;p&gt;
+&lt;p&gt;Say you&#x27;ve created a covid twitter list to keep track of news around the pandemic. You&#x27;ve just found another list on covid curated by an epidemiologist in London, and you want to add members from that to your own Covid list. This is the package you use for it.&lt;&#x2F;p&gt;
+&lt;p&gt;Now for most basic operations like retrieving the current membership of a Twitter list, adding users to it, removing them etc. the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tweepy&#x2F;tweepy&quot;&gt;Tweepy&lt;&#x2F;a&gt; library is good enough. &lt;code&gt;twitter_list_mgmt&lt;&#x2F;code&gt; just adds extra functionality on top of Tweepy to make working with lists easier.&lt;&#x2F;p&gt;
+&lt;p&gt;This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;list-of-functions&quot;&gt;List of functions&lt;&#x2F;h3&gt;
+&lt;p&gt;Here&#x27;s what you can do with the &lt;code&gt;twitter_list_mgmt&lt;&#x2F;code&gt; package:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Main functions
+&lt;ul&gt;
+&lt;li&gt;Add members to your list from another list &lt;small&gt;(&lt;a href=&quot;.&#x2F;#1&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Add members to your list from multiple lists &lt;small&gt;(&lt;a href=&quot;.&#x2F;#2&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Remove members from your list who are in another list &lt;small&gt;(&lt;a href=&quot;.&#x2F;#3&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Remove members from your list who are in any of multiple other lists &lt;small&gt;(&lt;a href=&quot;.&#x2F;#4&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Create a new list that combines members from multiple lists &lt;small&gt;(&lt;a href=&quot;.&#x2F;#5&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Create a new list that has members common to multiple lists &lt;small&gt;(&lt;a href=&quot;.&#x2F;#6&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Create a new list with members from a list, who aren&#x27;t in any of multiple other lists &lt;small&gt;(&lt;a href=&quot;.&#x2F;#7&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Other functions
+&lt;ul&gt;
+&lt;li&gt;Get the list id from a list url &lt;small&gt;(&lt;a href=&quot;.&#x2F;#8&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Get all the user ids of list members &lt;small&gt;(&lt;a href=&quot;.&#x2F;#9&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Add user ids to a list &lt;small&gt;(&lt;a href=&quot;.&#x2F;#10&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Remove user ids from a list &lt;small&gt;(&lt;a href=&quot;.&#x2F;#11&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Create a pandas dataframe from a list &lt;small&gt;(&lt;a href=&quot;.&#x2F;#12&quot;&gt;link&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-to-install-the-package-and-set-things-up&quot;&gt;How to install the package and set things up&lt;&#x2F;h3&gt;
+&lt;p&gt;Versions of Tweepy &amp;gt;= 4.0.0a0 are required for this package to work. At the time of writing, 4.0.0 is not available in &lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;project&#x2F;tweepy&#x2F;#history&quot;&gt;pypi&lt;&#x2F;a&gt;. Install it from the terminal by doing&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;pip install git+https:&#x2F;&#x2F;github.com&#x2F;tweepy&#x2F;tweepy.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In terms of setting up, you&#x27;ll have to &lt;a href=&quot;https:&#x2F;&#x2F;developer.twitter.com&#x2F;&quot;&gt;create&lt;&#x2F;a&gt; authentication credentials for yourself. (This &lt;a href=&quot;https:&#x2F;&#x2F;realpython.com&#x2F;twitter-bot-python-tweepy&#x2F;&quot;&gt;article&lt;&#x2F;a&gt; from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named &#x27;config_twitter.ini&#x27;, use the format below and paste in the credentials without apostrophes. You can also download a sample file &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;twitter_list_mgmt&#x2F;blob&#x2F;master&#x2F;twitter_list_mgmt&#x2F;config_twitter.ini&quot;&gt;here&lt;&#x2F;a&gt;. Place the config in the same directory and on the same level as your script.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[info]
+&lt;&#x2F;span&gt;&lt;span&gt;CONSUMER_KEY = XXXXXX
+&lt;&#x2F;span&gt;&lt;span&gt;CONSUMER_SECRET = XXXXXX
+&lt;&#x2F;span&gt;&lt;span&gt;ACCESS_TOKEN = XXXXXX
+&lt;&#x2F;span&gt;&lt;span&gt;ACCESS_TOKEN_SECRET = XXXXXX
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then install the main package by going to the terminal and typing&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;pip install twitter_list_mgmt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;how-to-use-the-package&quot;&gt;How to use the package&lt;&#x2F;h3&gt;
+&lt;p&gt;Import the package into your code with&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;import twitter_list_mgmt as tlm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The package has &lt;strong&gt;7&lt;&#x2F;strong&gt; main functions:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a name=&quot;1&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Add members to your list from another list&lt;&#x2F;strong&gt; — Here &#x27;list1&#x27; and &#x27;list2&#x27; are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;i&#x2F;lists&#x2F;15299140&quot;&gt;https:&#x2F;&#x2F;twitter.com&#x2F;i&#x2F;lists&#x2F;15299140&lt;&#x2F;a&gt;, the list id is &#x27;15299140&#x27;.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.add_to_list1_from_list2(list1, list2)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;2&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Add members to your list from several other lists&lt;&#x2F;strong&gt; — &#x27;multiple_lists&#x27; is a python list of twitter list ids. (To comply with Twitter&#x27;s rate limits, only upto 1000 members can be added in a day.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.add_to_list1_from_multiple_lists(list1, 
+&lt;&#x2F;span&gt;&lt;span&gt;                            multiple_lists)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;3&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Remove members from your list who are in another list&lt;&#x2F;strong&gt; — Let&#x27;s say you have a twitter list on covid that&#x27;s a mix of experts and journalists, and you want it to have experts only. Now you can remove many of the journalists from it manually, but you can also do it in an automated fashion by getting a list of science&#x2F;health journalists. Using this function, if any of your list members are on that journalist list, they&#x27;ll be removed. &#x27;list1&#x27; here is your list id.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.remove_from_list1_based_on_list2(list1, list2)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;4&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Remove members from your list who are in any of the other lists specified&lt;&#x2F;strong&gt; — &#x27;list1&#x27; here is your list id and &#x27;multiple_lists&#x27; is a python list of twitter list ids.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.remove_from_list1_based_on_multiple_lists(list1,
+&lt;&#x2F;span&gt;&lt;span&gt;                                    multiple_lists)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;5&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Create a new list that combines members from several lists&lt;&#x2F;strong&gt; — &#x27;multiple_lists&#x27; is the python list containing the twitter list ids and &#x27;list_name&#x27; is the name for the new list. (The Twitter list created is set as &#x27;private&#x27; but can be made &#x27;public&#x27; later.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.create_list_union(multiple_lists,list_name)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;6&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Create a new list that has members common to several lists&lt;&#x2F;strong&gt; — &#x27;multiple_lists&#x27; is the python list containing the twitter list ids and &#x27;list_name&#x27; is the name for the new list.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.create_list_intersection(multiple_lists,list_name)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;&lt;a name=&quot;7&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Create a new list with all the members from a list, who aren&#x27;t in any of the other lists specified&lt;&#x2F;strong&gt; — &#x27;list1&#x27; can be your own list or someone else&#x27;s, &#x27;multiple_lists&#x27; is a python list of twitter list ids and &#x27;list_name&#x27; is the name for the new list.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.create_list_difference(list1,multiple_lists,
+&lt;&#x2F;span&gt;&lt;span&gt;                                    list_name)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;other-things-you-can-do&quot;&gt;Other things you can do&lt;&#x2F;h3&gt;
+&lt;p&gt;The functions that have been listed are the main ones. There are others too, but most people won&#x27;t need them. Will go through some of those functions for coders who want to build something on top of them. (Go through &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;twitter_list_mgmt&#x2F;blob&#x2F;master&#x2F;twitter_list_mgmt&#x2F;helpers.py&quot;&gt;helpers.py&lt;&#x2F;a&gt; in the github repo to see how they&#x27;ve been defined.)&lt;&#x2F;p&gt;
+&lt;p&gt;These are some of the other functions:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;8&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Get the list id from a list url&lt;&#x2F;strong&gt; — Extracts the list_id and returns it as a string.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.get_list_id_from_url(url)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;9&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Get all the members of a list&lt;&#x2F;strong&gt; — The function returns a python list of their user ids.  Tweepy has a similar function &lt;a href=&quot;https:&#x2F;&#x2F;docs.tweepy.org&#x2F;en&#x2F;latest&#x2F;api.html#tweepy.API.get_list_members&quot;&gt;&lt;code&gt;get_list_members&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; but that retrieves user objects. This function goes a step further by extracting the user ids within those objects.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.get_list_members_ids(list_idx)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;10&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Add user ids to a list&lt;&#x2F;strong&gt; — &#x27;ids&#x27; here is a python list of user ids and &#x27;list1&#x27; is a twitter list id.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.add_ids_to_list(ids,list1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;11&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Remove user ids from a list&lt;&#x2F;strong&gt; — &#x27;ids&#x27; here is a python list of user ids and &#x27;list1&#x27; is a twitter list id.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.remove_ids_from_list(ids,list1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;12&quot;&gt;&lt;&#x2F;a&gt;&lt;strong&gt;Create a pandas dataframe from a list&lt;&#x2F;strong&gt; — Here, each row is for a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;tlm.create_df_from_list(list_idx)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;suggestions-criticism-etc&quot;&gt;Suggestions, criticism etc.&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;m not a professional developer&#x2F;programmer&#x2F;coder, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;shijith&quot;&gt;@shijith&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, I would be interested in hearing about my python application layout. Whether it could be simplified further, if I could be doing imports better etc.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Finding new music on Spotify by aggregating the choices of tastemakers</title>
+		<published>2021-06-22T00:00:00+00:00</published>
+		<updated>2021-06-22T00:00:00+00:00</updated>
+		<link href="https://shijith.com/blog/automating-music-discovery/" type="text/html"/>
+		<id>https://shijith.com/blog/automating-music-discovery/</id>
+		<content type="html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;m an amateur python coder and I write here about trying to make it easier to find new music. I do this by essentially combining playlists from influential music websites and radio stations into a single one on Spotify. &lt;&#x2F;p&gt;
+&lt;p&gt;Have decided to do this and not use Spotify&#x27;s human-curated and algorithmic playlists because they lack authority for me.&lt;&#x2F;p&gt;
+&lt;p&gt;The simple python script I&#x27;ve written for aggregating playlists is in this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;music-discovery&quot;&gt;Github repo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you don&#x27;t want to code anything and just want the music, you have two options:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Follow a &lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;0kqXhlpDiRbab64ip8g8Ap&quot;&gt;demo playlist&lt;&#x2F;a&gt; created using the default choices.&lt;&#x2F;li&gt;
+&lt;li&gt;Follow my &lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;3XidTKBIpsGymPCjlN7kZH&quot;&gt;personal playlist&lt;&#x2F;a&gt; that mines 33 sources of new music.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;my-earlier-routine-for-finding-music&quot;&gt;My earlier routine for finding music&lt;&#x2F;h3&gt;
+&lt;p&gt;When it comes to finding new music, my usual sources were Spotify playlists, online radio streams and YouTube channels. I love music, but going through each of them is difficult to do every week. &lt;&#x2F;p&gt;
+&lt;p&gt;Having to visit each individual website, realizing that &amp;quot;Oh, I didn&#x27;t go to &lt;a href=&quot;https:&#x2F;&#x2F;livesessions.npr.org&#x2F;&quot;&gt;NPR Live Sessions&lt;&#x2F;a&gt; last week, so got to do it this week&amp;quot;. The very fact that I call it a &#x27;routine&#x27; shows how it had become a chore for me, a sequence of steps to follow every week. &lt;&#x2F;p&gt;
+&lt;p&gt;So I&#x27;ve decided to simplify my music discovery process, and make it less of a &#x27;routine&#x27; by collecting all the new music I should be listening to in one Spotify playlist. Reduce those multiple steps into a single one, stick to that one playlist and be happy with that.&lt;&#x2F;p&gt;
+&lt;p&gt;What I&#x27;ve done is I&#x27;ve mined various playlists on Spotify that look at the new music that&#x27;s released every week. These playlists are from radio stations like &lt;a href=&quot;https:&#x2F;&#x2F;www.kcrw.com&#x2F;&quot;&gt;KCRW&lt;&#x2F;a&gt; and BBC &lt;a href=&quot;bbc.co.uk&#x2F;6music&quot;&gt;Radio 6&lt;&#x2F;a&gt;, music websites like &lt;a href=&quot;https:&#x2F;&#x2F;pitchfork.com&#x2F;&quot;&gt;Pitchfork&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.thelineofbestfit.com&#x2F;&quot;&gt;Line of Best Fit&lt;&#x2F;a&gt;, and traditional publications like &lt;a href=&quot;https:&#x2F;&#x2F;www.rollingstone.com&#x2F;&quot;&gt;Rolling Stone&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;logos_2.jpg&quot; alt=&quot;Logos of music tastemakers&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;These are stations, websites and publications that care about music and are considered tastemakers in the US and UK. And by aggregating their choices, I get to benefit from their collective musical wisdom in one playlist without investing hours of my time.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-i-m-not-using-spotify-s-own-playlists&quot;&gt;Why I&#x27;m not using Spotify&#x27;s own playlists&lt;&#x2F;h3&gt;
+&lt;p&gt;If you&#x27;re a Spotify obsessive, you could point out that it has its own playlists, human-curated ones like &#x27;&lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;37i9dQZF1DX4JAvHpjipBk&quot;&gt;New Music Friday&lt;&#x2F;a&gt;&#x27; and algorithmic ones like &#x27;Release Radar&#x27; that specifically look at the new music released in the week. So why reinvent the wheel?&lt;&#x2F;p&gt;
+&lt;p&gt;The thing is the websites and stations whose playlists I&#x27;m aggregating are widely respected. I may not like some of the songs these tastemakers recommend, but it&#x27;s important for me to hear these recommendations and then maybe reject them, than to never hear them at all.&lt;&#x2F;p&gt;
+&lt;p&gt;They were also part of my routine earlier, so it&#x27;s important to me that they remain part of my music discovery process.&lt;&#x2F;p&gt;
+&lt;p&gt;No doubt, Spotify&#x27;s own playlists are very &lt;a href=&quot;https:&#x2F;&#x2F;www.theguardian.com&#x2F;music&#x2F;2019&#x2F;apr&#x2F;28&#x2F;streaming-music-algorithms-spotify&quot;&gt;influential&lt;&#x2F;a&gt; and the curators behind them have become minor &lt;a href=&quot;https:&#x2F;&#x2F;edmreviewer.com&#x2F;2020&#x2F;04&#x2F;20&#x2F;austin-kramer-the-god-of-edm&#x2F;&quot;&gt;celebrities&lt;&#x2F;a&gt; in their own right. But since these playlists aren&#x27;t from established sources of musical authority or from institutions I&#x27;m familiar with, I value their judgement a little less.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;if-you-want-to-rely-less-on-spotify-s-algorithms&quot;&gt;If you want to rely less on Spotify&#x27;s algorithms&lt;&#x2F;h3&gt;
+&lt;p&gt;To be clear, I&#x27;m not exactly a &#x27;down with algorithms&#x27; guy.  If your issue with Spotify&#x27;s algorithmic playlists is that there is a sameness to the music, that you&#x27;re not getting exposed to different artists, and you fear you&#x27;ll end up in a musical &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;LetsTalkMusic&#x2F;comments&#x2F;g8m4m2&#x2F;spotify_radio_from_song_or_album_is_it_just_me_or&#x2F;&quot;&gt;filter bubble&lt;&#x2F;a&gt;, my feeling is these issues are correctable. The algorithms can be tweaked to make Spotify&#x27;s recommendations more diverse. &lt;&#x2F;p&gt;
+&lt;p&gt;But if you&#x27;ve made up your mind about Spotify and want to rely less on its algorithms, you can use the script I&#x27;ve put up on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;music-discovery&quot;&gt;Github&lt;&#x2F;a&gt; to generate musically varied playlists.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m aggregating playlists from tastemakers in my script, but you can collect playlists from any user you find on Spotify. It doesn&#x27;t have to just be for new music either. For example, you could aggregate acoustic music playlists from various users to get a new acoustic playlist every week.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-gap-this-tool-fills&quot;&gt;The gap this tool fills&lt;&#x2F;h3&gt;
+&lt;p&gt;The internet isn&#x27;t short of playlist creation tools for Spotify. The thing is most of them are &lt;a href=&quot;https:&#x2F;&#x2F;dubolt.com&#x2F;&quot;&gt;about&lt;&#x2F;a&gt; generating playlists of music based on a song or artist you seed it with. Or generating playlists based on a &lt;a href=&quot;http:&#x2F;&#x2F;playlistminer.playlistmachinery.com&#x2F;&quot;&gt;keyword&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This script tries to do something different by generating a playlist based on your choice of musical authority. And also update it every week, once you schedule it that way. For most tools (with one &lt;a href=&quot;https:&#x2F;&#x2F;mixtapemanager.ca&#x2F;&quot;&gt;exception&lt;&#x2F;a&gt;), playlist generation is a one-time exercise with no updates.&lt;&#x2F;p&gt;
+&lt;p&gt;One website that tries to aggregate tastemaker preferences like this is &lt;a href=&quot;https:&#x2F;&#x2F;hypem.com&quot;&gt;Hype Machine&lt;&#x2F;a&gt;. It collects recommendations from hundreds of music websites, blogs etc. and has its own interface for listening to music. The thing is, for many people their musical world is centred around Spotify and Apple Music, but Hype Machine isn&#x27;t integrated with those apps.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hypem.com&#x2F;latest&quot;&gt;&lt;img src=&quot;hypemachine.png&quot; alt=&quot;Screenshot of Hype Machine&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;how-it-s-implemented&quot;&gt;How it&#x27;s implemented&lt;&#x2F;h3&gt;
+&lt;p&gt;There isn&#x27;t anything sophisticated being done here, it&#x27;s just a python script. But hopefully this will meet the needs of &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;amateur coders who want to spend less time finding new music&lt;&#x2F;li&gt;
+&lt;li&gt;lifehackers who want to automate aspects of their lives and, &lt;&#x2F;li&gt;
+&lt;li&gt;in general, anyone who wants to simplify their Spotify experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There are 75 playlists users can choose to aggregate. They&#x27;re all new music playlists, updated every week&#x2F;month, from important music publications, websites and radio stations in the US and UK. While most of the playlists explore new music across genres, some are genre-specific, some focus on new music from emerging artists, while others focus on tracks from new albums. &lt;&#x2F;p&gt;
+&lt;p&gt;6 playlists (from Pitchfork, Rolling Stone, KCRW in the US and Line of Best Fit, NME, BBC Radio 6 in the UK) have been pre-selected to give a user default choices to start with, but they can be un-selected.&lt;&#x2F;p&gt;
+&lt;p&gt;If you follow the instructions in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;music-discovery&quot;&gt;Github repo&lt;&#x2F;a&gt;, you&#x27;ll end up with a playlist titled &#x27;New Music for &amp;lt; your Spotify user id &amp;gt;&#x27; in your Spotify library.&lt;&#x2F;p&gt;
+&lt;p&gt;A demo playlist created using the six default choices is &lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;0kqXhlpDiRbab64ip8g8Ap&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;0kqXhlpDiRbab64ip8g8Ap&quot;&gt;&lt;img src=&quot;playlist_screenshot.png&quot; alt=&quot;Screenshot of spotify playlist&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;don-t-turn-music-into-work&quot;&gt;Don&#x27;t turn music into work&lt;&#x2F;h3&gt;
+&lt;p&gt;Note that your playlist is wiped clean and new tracks are added every time you run the script. So you&#x27;ll need to get through the songs on the playlist before you run the script again. &lt;&#x2F;p&gt;
+&lt;p&gt;You don&#x27;t have to make it a chore though, or get anxious about finishing the playlist. Just have it running in the background while you&#x27;re working or browsing, &#x27;like&#x27; songs to add them to your liked songs list, and skip liberally. &lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2020&#x2F;5&#x2F;26&#x2F;21270409&#x2F;spotify-song-library-limit-removed-music-downloads-playlists-feature&quot;&gt;no limit&lt;&#x2F;a&gt; in Spotify to how many songs you can like. You can then decide later what you want to do with your liked songs. Put some on a workout playlist, others on an office playlist etc.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;for-more-details&quot;&gt;For more details&lt;&#x2F;h3&gt;
+&lt;p&gt;The code, and more details about the implementation are available in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shijithpk&#x2F;music-discovery&quot;&gt;Github repo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Hopefully, this tool will give people a model to build on, and create even better setups for finding new music.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
