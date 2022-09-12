@@ -331,7 +331,7 @@ Random thoughts and observations that don't fit elsewhere.
 
 Below is a video of what happens when I search for the album 'Hotel California' by The Eagles on YouTube Music. The album shows up in the results, but when I click on individual tracks, they're all greyed out and won't play.
 
-<video autoplay loop><source src="output.mp4" type="video/mp4"></video>
+<video autoplay loop><source src="output.webm" type="video/webm"></video>
 
 Other services like Hungama and Wynk are guilty of this too, and it's really frustrating for the end-user. I know these are essentially placeholder entries for albums that a service may not have the rights for at the moment, and could in the future. But till they do, I feel those albums shouldn't show up in search results. Makes for a bad user experience.
 
