@@ -355,6 +355,6 @@ The difficulty with doing something for Indian music is finding publications who
 
 I guess one way you could do it while still sticking to English-language websites is to collect info on the National Film awards or State Film Awards for the last N years, look at the movies/composers/singers that get nominated, and use the lists of nominees to compile a dataset. Unfortunately, this will exclude the independent music scene outside movies.
 
-### Want to hire me?
+<!-- ### Want to hire me?
 
-I've been on a pandemic break, but with this project over, I'm ready to get back to full-time work. Have a look at the rest of [my website](https://shijith.com/). If you like what I've done and think I could be of value to your company, email me at [mail@shijith.com](mailto:mail@shijith.com) or message me on [LinkedIn](https://www.linkedin.com/in/shijith/).
+I've been on a pandemic break, but with this project over, I'm ready to get back to full-time work. Have a look at the rest of [my website](https://shijith.com/). If you like what I've done and think I could be of value to your company, email me at [mail@shijith.com](mailto:mail@shijith.com) or message me on [LinkedIn](https://www.linkedin.com/in/shijith/). -->
