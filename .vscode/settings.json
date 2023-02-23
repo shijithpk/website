@@ -1,2 +1,4 @@
 {
+	"editor.glyphMargin": true,
+	"scm.diffDecorationsGutterWidth": 3
 }

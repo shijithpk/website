@@ -82,8 +82,9 @@
 }
 
 img {
-  max-width: 100%;
-  margin: auto;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
   // border: solid rgba(0, 0, 0, 0.04);
 }
 
