@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Website generated with Zola http://getzola.org/. 
+       Used the 'Simple Dev Blog' theme by Bennett Hardwick https://www.getzola.org/themes/simple-dev-blog/ 
+       Look inspired by Karan Sharma's website https://mrkaran.dev/ -->
+       
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #ff652f;
+        --accent-color-light: #ff652f;
+      }
+    </style>
+
+    <meta name="theme-color" content="#ff652f" />
+
+    
+      <link rel="icon" href="[object]" />
+      <link rel="apple-touch-icon" sizes="48x48" href="[object]" />
+      <link rel="apple-touch-icon" sizes="72x72" href="[object]" />
+      <link rel="apple-touch-icon" sizes="96x96" href="[object]" />
+      <link rel="apple-touch-icon" sizes="144x144" href="[object]" />
+      <link rel="apple-touch-icon" sizes="192x192" href="[object]" />
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+    <meta property="og:image" content="https://shijith.com/blog/twitter-list-management/logo_1.png">
+    <meta property="twitter:image" content="https://shijith.com/blog/twitter-list-management/logo_1.png" />
+
+    
+
+    
+      
+        <meta name="description" content="A python package for improving your lists on Twitter by using lists from others" />
+        <meta name="twitter:description" content="A python package for improving your lists on Twitter by using lists from others">
+        <meta property="og:description" content="A python package for improving your lists on Twitter by using lists from others" />
+      
+    
+
+    
+      <meta name="twitter:title" content="Making it easier to add users from one Twitter list to another">
+      <meta property="og:title" content="Making it easier to add users from one Twitter list to another" />
+    
+
+    
+      <link rel="prerender" href="&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+
+    <!-- <link rel="prefetch" href="[object]" /> -->
+
+    <title>
+      
+        
+          Making it easier to add users from one Twitter list to another
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://shijith.com/main.css">
+    
+    
+  
+
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Making it easier to add users from one Twitter list to another",
+      "image": [],
+      "datePublished": "2021-07-12T00:00:00+00:00",
+      "dateModified": "2021-07-12T00:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Shijith Kunhitty"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Shijith Kunhitty",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shijith.com/header_smaller.png"
+        }
+        
+      }
+      
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "",
+          "item": "https://shijith.com/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Making it easier to add users from one Twitter list to another",
+          "item": "https://shijith.com/blog/twitter-list-management/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header class="header">
+        <!-- <a href="/">
+          <img src="[object]"> -->
+         <a href="/">
+            <img alt="One of De Morgan's Laws" src="/header_smaller.png">
+        </a>
+        <nav >
+          
+            <a class="alwaysDark" href="&#x2F;">Home</a>
+          
+            <a class="alwaysDark" href="&#x2F;about&#x2F;">About</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h2>Making it easier to add users from one Twitter list to another</h2>
+    <small>
+      July 12, 2021
+    </small>
+  </div>
+
+  <div>
+    <h3 id="tldr">TLDR</h3>
+<p>The post is about <a href="https://github.com/shijithpk/twitter_list_mgmt"><code>twitter_list_mgmt</code></a>, a python package I created to make it easier to add users to your Twitter list from other lists.</p>
+<p>Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that to your own Covid list. This is the package you use for it.</p>
+<p>Now for most basic operations like retrieving the current membership of a Twitter list, adding users to it, removing them etc. the <a href="https://github.com/tweepy/tweepy">Tweepy</a> library is good enough. <code>twitter_list_mgmt</code> just adds extra functionality on top of Tweepy to make working with lists easier.</p>
+<p>This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.</p>
+<h3 id="list-of-functions">List of functions</h3>
+<p>Here's what you can do with the <code>twitter_list_mgmt</code> package:</p>
+<ul>
+<li>Main functions
+<ul>
+<li>Add members to your list from another list <small>(<a href="https://shijith.com/blog/twitter-list-management/./#1">link</a>)</small></li>
+<li>Add members to your list from multiple lists <small>(<a href="https://shijith.com/blog/twitter-list-management/./#2">link</a>)</small></li>
+<li>Remove members from your list who are in another list <small>(<a href="https://shijith.com/blog/twitter-list-management/./#3">link</a>)</small></li>
+<li>Remove members from your list who are in any of multiple other lists <small>(<a href="https://shijith.com/blog/twitter-list-management/./#4">link</a>)</small></li>
+<li>Create a new list that combines members from multiple lists <small>(<a href="https://shijith.com/blog/twitter-list-management/./#5">link</a>)</small></li>
+<li>Create a new list that has members common to multiple lists <small>(<a href="https://shijith.com/blog/twitter-list-management/./#6">link</a>)</small></li>
+<li>Create a new list with members from a list, who aren't in any of multiple other lists <small>(<a href="https://shijith.com/blog/twitter-list-management/./#7">link</a>)</small></li>
+</ul>
+</li>
+<li>Other functions
+<ul>
+<li>Get the list id from a list url <small>(<a href="https://shijith.com/blog/twitter-list-management/./#8">link</a>)</small></li>
+<li>Get all the user ids of list members <small>(<a href="https://shijith.com/blog/twitter-list-management/./#9">link</a>)</small></li>
+<li>Add user ids to a list <small>(<a href="https://shijith.com/blog/twitter-list-management/./#10">link</a>)</small></li>
+<li>Remove user ids from a list <small>(<a href="https://shijith.com/blog/twitter-list-management/./#11">link</a>)</small></li>
+<li>Create a pandas dataframe from a list <small>(<a href="https://shijith.com/blog/twitter-list-management/./#12">link</a>)</small></li>
+</ul>
+</li>
+</ul>
+<h3 id="how-to-install-the-package-and-set-things-up">How to install the package and set things up</h3>
+<p>Versions of Tweepy &gt;= 4.0.0a0 are required for this package to work. At the time of writing, 4.0.0 is not available in <a href="https://pypi.org/project/tweepy/#history">pypi</a>. Install it from the terminal by doing</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pip install git+https://github.com/tweepy/tweepy.git
+</span></code></pre>
+<p>In terms of setting up, you'll have to <a href="https://developer.twitter.com/">create</a> authentication credentials for yourself. (This <a href="https://realpython.com/twitter-bot-python-tweepy/">article</a> from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials without apostrophes. You can also download a sample file <a href="https://github.com/shijithpk/twitter_list_mgmt/blob/master/twitter_list_mgmt/config_twitter.ini">here</a>. Place the config in the same directory and on the same level as your script.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[info]
+</span><span>CONSUMER_KEY = XXXXXX
+</span><span>CONSUMER_SECRET = XXXXXX
+</span><span>ACCESS_TOKEN = XXXXXX
+</span><span>ACCESS_TOKEN_SECRET = XXXXXX
+</span></code></pre>
+<p>Then install the main package by going to the terminal and typing</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pip install twitter_list_mgmt
+</span></code></pre>
+<h3 id="how-to-use-the-package">How to use the package</h3>
+<p>Import the package into your code with</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>import twitter_list_mgmt as tlm
+</span></code></pre>
+<p>The package has <strong>7</strong> main functions:</p>
+<ol>
+<li><a name="1"></a><strong>Add members to your list from another list</strong> — Here 'list1' and 'list2' are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url <a href="https://twitter.com/i/lists/15299140">https://twitter.com/i/lists/15299140</a>, the list id is '15299140'.)</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.add_to_list1_from_list2(list1, list2)
+</span></code></pre>
+<ol start="2">
+<li><a name="2"></a><strong>Add members to your list from several other lists</strong> — 'multiple_lists' is a python list of twitter list ids. (To comply with Twitter's rate limits, only upto 1000 members can be added in a day.)</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.add_to_list1_from_multiple_lists(list1, 
+</span><span>                            multiple_lists)
+</span></code></pre>
+<ol start="3">
+<li><a name="3"></a><strong>Remove members from your list who are in another list</strong> — Let's say you have a twitter list on covid that's a mix of experts and journalists, and you want it to have experts only. Now you can remove many of the journalists from it manually, but you can also do it in an automated fashion by getting a list of science/health journalists. Using this function, if any of your list members are on that journalist list, they'll be removed. 'list1' here is your list id.</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.remove_from_list1_based_on_list2(list1, list2)
+</span></code></pre>
+<ol start="4">
+<li><a name="4"></a><strong>Remove members from your list who are in any of the other lists specified</strong> — 'list1' here is your list id and 'multiple_lists' is a python list of twitter list ids.</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.remove_from_list1_based_on_multiple_lists(list1,
+</span><span>                                    multiple_lists)
+</span></code></pre>
+<ol start="5">
+<li><a name="5"></a><strong>Create a new list that combines members from several lists</strong> — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list. (The Twitter list created is set as 'private' but can be made 'public' later.)</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.create_list_union(multiple_lists,list_name)
+</span></code></pre>
+<ol start="6">
+<li><a name="6"></a><strong>Create a new list that has members common to several lists</strong> — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.create_list_intersection(multiple_lists,list_name)
+</span></code></pre>
+<ol start="7">
+<li><a name="7"></a><strong>Create a new list with all the members from a list, who aren't in any of the other lists specified</strong> — 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.create_list_difference(list1,multiple_lists,
+</span><span>                                    list_name)
+</span></code></pre>
+<h3 id="other-things-you-can-do">Other things you can do</h3>
+<p>The functions that have been listed are the main ones. There are others too, but most people won't need them. Will go through some of those functions for coders who want to build something on top of them. (Go through <a href="https://github.com/shijithpk/twitter_list_mgmt/blob/master/twitter_list_mgmt/helpers.py">helpers.py</a> in the github repo to see how they've been defined.)</p>
+<p>These are some of the other functions:</p>
+<ul>
+<li><a name="8"></a><strong>Get the list id from a list url</strong> — Extracts the list_id and returns it as a string.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.get_list_id_from_url(url)
+</span></code></pre>
+<ul>
+<li><a name="9"></a><strong>Get all the members of a list</strong> — The function returns a python list of their user ids.  Tweepy has a similar function <a href="https://docs.tweepy.org/en/latest/api.html#tweepy.API.get_list_members"><code>get_list_members</code></a> but that retrieves user objects. This function goes a step further by extracting the user ids within those objects.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.get_list_members_ids(list_idx)
+</span></code></pre>
+<ul>
+<li><a name="10"></a><strong>Add user ids to a list</strong> — 'ids' here is a python list of user ids and 'list1' is a twitter list id.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.add_ids_to_list(ids,list1)
+</span></code></pre>
+<ul>
+<li><a name="11"></a><strong>Remove user ids from a list</strong> — 'ids' here is a python list of user ids and 'list1' is a twitter list id.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.remove_ids_from_list(ids,list1)
+</span></code></pre>
+<ul>
+<li><a name="12"></a><strong>Create a pandas dataframe from a list</strong> — Here, each row is for a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>tlm.create_df_from_list(list_idx)
+</span></code></pre>
+<h3 id="suggestions-criticism-etc">Suggestions, criticism etc.</h3>
+<p>I'm not a professional developer/programmer/coder, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle <a href="https://twitter.com/shijith">@shijith</a>.</p>
+<p>For example, I would be interested in hearing about my python application layout. Whether it could be simplified further, if I could be doing imports better etc.</p>
+
+  </div>
+
+  <hr />
+
+
+
+
+    </main>
+  </body>
+</html>
