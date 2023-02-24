@@ -90,7 +90,7 @@ Those sections have been circled in black in the graphic below.
 
 In the graphic, comparing true color imagery from past and present doesn't really give us an insight into what's changed. The land use and land cover comparison gives us a better idea of what's happened with cropland in the circled areas being replaced by built-up structures (homes, complexes etc.)
 
-Zooming out and situating Vijayapuram in its broader geographical context clears things up even further. We see that the circle on the left is just 5 km from Kottayam, an important urban centre in Kerala.
+Zooming out and situating Vijayapuram in its broader geographical context clears things up a little. We see that the circle on the left is just 5 km from Kottayam, an important urban centre in Kerala.
 
 The opening of Vattamoodu bridge [in 2016](https://www.youtube.com/watch?v=iwuOX540mUQ) across the Meenachil river has made them even more connected and possibly led to increased urbanisation of the circled area on the left. 
 
@@ -198,7 +198,7 @@ For example, I didn't describe the rise in temperatures over southern Kerala as 
 
 Instead I focused on individual panchayats (Vadakarapathy and Vijayapuram) and tried to see what data could tell us about them. A lot of journalism is actually just that, focusing on specific cases and I'd forgotten about this aspect of the profession.
 
-But I was reminded of it by a [2022 story](https://peabee.substack.com/p/17-one-kitchen-hundreds-of-internet) from techie Prashant Baid that hyper-focused on one Bangalore cloud kitchen and exposed its shady practices with the help of data. I'm going to make a conscious effort to do similar investigative work that isn't about making any grand claims.
+But I was reminded of it by a [2022 story](https://peabee.substack.com/p/17-one-kitchen-hundreds-of-internet) from techie Prashant Baid that hyper-focused on one Bangalore cloud kitchen and exposed its shady practices with the help of data. I'm going to make a conscious effort to do similar investigative work that isn't about making grand claims.
 
 
 ## Suggestions, feedback
