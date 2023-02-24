@@ -17,6 +17,10 @@ Aggregating figures at a state level, 55% of Kerala's panchayats have grown hott
 
 We also investigate Vadakarapathy and Vijayapuram using various kinds of satellite data to find out what's special about them. 
 
+
+![Sun looming over the Chinese fishing nets in Kochi](IMAGES/10_planetary_computer_screenshot.png)
+<sup>Sun looming over the Chinese fishing nets in Kochi Credit: [Tim Moffatt/Flickr](https://flic.kr/p/at87Ho)</sup>
+
 ### Why I'm doing this blogpost
 
 Kerala is ridiculously hot, so hot that [some wags](https://www.reddit.com/r/Kerala/comments/zafi01/comment/iylmttd/?utm_source=reddit&utm_medium=web2x&context=3) say the state only has two seasons—'dry' summer and 'wet' summer. I can personally attest to how much warmer Kerala has gotten over the years, most likely an effect of urbanisation and development. 
