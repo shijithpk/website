@@ -17,8 +17,8 @@ Aggregating figures at a state level, 55% of Kerala's panchayats have grown hott
 
 We also investigate Vadakarapathy and Vijayapuram using various kinds of satellite data to find out what's special about them. 
 
-![Sun looming over the Chinese fishing nets in Kochi](IMAGES/kerala_sun.jpg)
-<sup>Sun looming over the Chinese fishing nets in Kochi. Credit: [Tim Moffatt/Flickr](https://flic.kr/p/at87Ho)</sup>
+![The sun looming over Chinese fishing nets in Kerala](IMAGES/kerala_sun.jpg)
+<sup>The sun looming over Chinese fishing nets in Kerala. Credit: [Tim Moffatt/Flickr](https://flic.kr/p/at87Ho)</sup>
 
 ### Why I'm doing this blogpost
 
